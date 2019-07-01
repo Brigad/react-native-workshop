@@ -1,0 +1,8 @@
+query gifs($search: String!) {
+  gifs(search: $search) {
+    id
+    title
+    url
+    urlSmall
+  }
+}
