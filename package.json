@@ -8,19 +8,24 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@types/lodash.debounce": "^4.0.6",
     "apollo-cache-inmemory": "^1.6.2",
     "apollo-client": "^2.6.3",
     "apollo-link-http": "^1.5.15",
     "expo": "^33.0.0",
     "graphql": "^14.4.1",
     "graphql-tag": "^2.10.1",
+    "lodash.debounce": "^4.0.8",
     "react": "16.8.3",
     "react-apollo": "^2.5.8",
     "react-dom": "^16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
-    "react-native-web": "^0.11.4"
+    "react-native-paper": "^2.16.0",
+    "react-native-web": "^0.11.4",
+    "react-navigation": "^3.11.0"
   },
   "devDependencies": {
+    "@bam.tech/react-native-graphql-transformer": "https://github.com/titozzz/react-native-graphql-transformer.git#cbd88cc5524b83f98e4f2cf8d5ed6430aac190a1",
     "@types/react": "^16.8.19",
     "@types/react-native": "^0.57.60",
     "apollo": "^2.15.0",

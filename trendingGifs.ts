@@ -3,30 +3,29 @@
 // This file was automatically generated and should not be edited.
 
 // ====================================================
-// GraphQL query operation: gifs
+// GraphQL query operation: trendingGifs
 // ====================================================
 
-export interface gifs_gifs_user {
+export interface trendingGifs_trendingGifs_user {
   __typename: "User";
   displayName: string;
   avatarUrl: string;
 }
 
-export interface gifs_gifs {
+export interface trendingGifs_trendingGifs {
   __typename: "Gif";
   id: string;
   title: string;
   url: string;
   urlSmall: string;
   source: string | null;
-  user: gifs_gifs_user | null;
+  user: trendingGifs_trendingGifs_user | null;
 }
 
-export interface gifs {
-  gifs: gifs_gifs[];
+export interface trendingGifs {
+  trendingGifs: trendingGifs_trendingGifs[];
 }
 
-export interface gifsVariables {
-  search: string;
+export interface trendingGifsVariables {
   offset?: number | null;
 }

@@ -1,5 +1,5 @@
-query gifs($search: String!, $offset: Int) {
-  gifs(search: $search, offset: $offset) {
+query trendingGifs($offset: Int) {
+  trendingGifs(offset: $offset) {
     id
     title
     url
