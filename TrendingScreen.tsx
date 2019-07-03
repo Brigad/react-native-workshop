@@ -1,22 +1,22 @@
 import { View } from 'react-native';
 import { ActivityIndicator } from 'react-native-paper';
-import React, { useState } from 'react';
+import React from 'react';
 import GifList from './GifList';
 import TrendingGifsQuery from './TrendingGifsQuery';
 
 const TrendingScreen = ({ navigation }) => {
   return (
     <TrendingGifsQuery>
-      {({ trendingGifs: gifs, fetchMore }) => {
+      {({ trendingGifs, fetchMore }) => {
         return (
           <View style={{ flex: 1 }}>
-            {gifs ? (
+            {trendingGifs ? (
               <GifList
-                gifs={gifs}
+                gifs={trendingGifs}
                 onEndReached={() =>
                   fetchMore({
                     variables: {
-                      offset: gifs.length,
+                      offset: trendingGifs.length,
                     },
                     updateQuery: (prev, { fetchMoreResult }) => {
                       if (!fetchMoreResult) {
@@ -25,7 +25,7 @@ const TrendingScreen = ({ navigation }) => {
 
                       return {
                         ...prev,
-                        gifs: [
+                        trendingGifs: [
                           ...prev.trendingGifs,
                           ...fetchMoreResult.trendingGifs,
                         ],
