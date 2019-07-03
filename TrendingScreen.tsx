@@ -33,6 +33,9 @@ const TrendingScreen = ({ navigation }) => {
                     },
                   })
                 }
+                onCardPress={id => {
+                  navigation.navigate('details', { id });
+                }}
               />
             ) : (
               <View style={{ flex: 1, justifyContent: 'center' }}>

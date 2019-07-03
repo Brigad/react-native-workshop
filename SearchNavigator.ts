@@ -1,5 +1,6 @@
 import { createStackNavigator } from 'react-navigation';
 import SearchScreen from './SearchScreen';
+import GifDetailsScreen from './GifDetailsScreen';
 
 const SearchNavigator = createStackNavigator({
   list: {
@@ -8,7 +9,12 @@ const SearchNavigator = createStackNavigator({
       title: 'Search Gifs',
     },
   },
-  details: SearchScreen,
+  details: {
+    screen: GifDetailsScreen,
+    navigationOptions: {
+      title: 'Details of Gif',
+    },
+  },
 });
 
 export default SearchNavigator;

@@ -66,6 +66,9 @@ const SearchScreen = ({ navigation }) => {
                         },
                       })
                     }
+                    onCardPress={id => {
+                      navigation.navigate('details', { id });
+                    }}
                   />
                 );
               })()}

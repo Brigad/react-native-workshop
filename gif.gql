@@ -1,0 +1,13 @@
+query gif($id: String!) {
+  gif(id: $id) {
+    id
+    title
+    url
+    urlSmall
+    source
+    user {
+      displayName
+      avatarUrl
+    }
+  }
+}
